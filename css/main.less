@@ -1,0 +1,418 @@
+// out:main.css, sourcemap:false, compress:true
+@import "variables.less";
+@font-face {
+    font-family: "BMW Type Global Pro Light";
+    src: url('../fonts/bmwr.eot');
+    src: url('../fonts/bmwr.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/bmwr.woff') format('woff'), 
+       url('../fonts/bmwr.ttf') format('truetype'), 
+       url('../fonts/bmwr.svg#svgFontName') format('svg');
+}
+@font-face {
+    font-family: "BMW Type Global Pro Bold";
+    src: url('../fonts/bmwb.eot');
+    src: url('../fonts/bmwb.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/bmwb.woff') format('woff'), 
+       url('../fonts/bmwb.ttf') format('truetype'), 
+       url(../fonts/bmwb.svg#svgFontName) format('svg');
+    font-weight: bold;
+}
+body{margin: 0;/*background: #E6E6E6*/}
+header {
+  padding: 1.5rem;background: #E6E6E6 url(../imgs/bg-header.png) no-repeat right top; background-size:auto 25%;
+  h1 {color: #262626; font-size: 36px; font-family: "BMW Type Global Pro Bold"; margin-bottom: 1rem;}
+  h2 {color: #262626; font-size: 16px; font-family: "BMW Type Global Pro Bold"; font-weight: bold;}
+  p{color: #262626; font-size: 13px; font-family: Arial;line-height: 1rem;}
+}
+header.app-connected-drive {display:flex;background: #E6E6E6 url(../imgs/bg-header-connected-drive.png) no-repeat right bottom; background-size:100% auto;}
+.goback {
+  text-indent:999px;margin-right: 1rem;
+  a{background: url(../imgs/ic_arrow_back_dark.png) no-repeat center center; background-size:100%; display:block; width:16px; height:16px; margin:2rem 0;}
+}
+section {background-color: #E6E6E6;padding: 1.5rem;}
+.bx-wrapper{}
+#AppConnectedCarousel {
+  video{
+    max-height: 600px;
+  }
+  position: relative;padding: 0;overflow: hidden;text-align: center;
+  a.prevsection{
+    background: url(../imgs/ico-prev-gray.png) no-repeat center center; width:16px; height:24px; position:absolute; top:15%; left:10px;
+    span{left: 0px; -webkit-transform:translatex(-100%);transform: translateX(-100%);position: absolute; top: 0; margin: 0; color: #ffffff; text-transform: uppercase; white-space: nowrap; letter-spacing: 1px; font-weight: 400; font-size: 0.85em; line-height: 3; opacity: 0; -webkit-transition: opacity 0.3s, -webkit-transform 0.3s; transition: opacity 0.3s, transform 0.3s; background-color: #212121;padding:0 1rem 0 2rem;}
+    h3{font-size: 14px;}
+    &:hover span {opacity: 1; -webkit-transition-delay: 0.1s; transition-delay: 0.1s; -webkit-transform: translateX(0); transform: translateX(0);opacity:0.8;}
+  }
+  a.nextsection{
+    background: url(../imgs/ico-next-gray.png) no-repeat center center; width:16px; height:24px; position:absolute; top:15%; right:10px;
+    span{right: 0px; -webkit-transform:translatex(100%);transform: translateX(100%);position: absolute; top: 0; margin: 0; color: #ffffff; text-transform: uppercase; white-space: nowrap; letter-spacing: 1px; font-weight: 400; font-size: 0.85em; line-height: 3; opacity: 0; -webkit-transition: opacity 0.3s, -webkit-transform 0.3s; transition: opacity 0.3s, transform 0.3s; background-color: #212121;padding:0 2rem 0 1rem;}
+    h3{font-size: 14px;}
+    &:hover span {opacity: 1; -webkit-transition-delay: 0.1s; transition-delay: 0.1s; -webkit-transform: translateX(0); transform: translateX(0);opacity:0.8;}
+
+  }
+  > div.containervideo {
+    display: flex;flex-direction: column; justify-content: flex-end;
+    .leftcontainer {
+      position: relative;margin: 0;
+      video{height: 100%;}
+      video::-internal-media-controls-download-button {
+          display:none;
+        }
+      video::-webkit-media-controls-enclosure {
+            overflow:hidden;
+      }
+
+       video::-webkit-media-controls-panel {
+            width: calc(100%+30px); /* Adjust as needed */
+      }
+      div{position: absolute;bottom:10%; left:5%;width: 90%}
+      h3{color: #fff; font-family: "BMW Type Global Pro Light";margin: .5rem 0;line-height: 1.5rem;}
+      hr{border-color:#009BF6;left: 1rem;margin: .5rem 0;}
+      p{color: #fff;left: 1rem;margin: .5rem 0;line-height: 1.5rem;}
+    }
+    .rightcontainer {
+      background: #f3f3f3;padding: 1.5rem 2rem;
+      img{display: block;width: auto;margin: 0 auto;}
+      h3{color: #262626; font-family: "BMW Type Global Pro Bold";font-size: 24px;width: 90%;margin: 1rem auto;}
+      p{color: #262626; font-family: arial;font-size: 13px;width: 90%;margin: 1rem auto;line-height: 1.1rem;}
+    }
+  }
+  .bgvid{
+    video::-internal-media-controls-download-button {
+          display:none;
+        }
+        video::-webkit-media-controls-enclosure {
+            overflow:hidden;
+        }
+
+        video::-webkit-media-controls-panel {
+            width: calc(100%+30px); /* Adjust as needed */
+        }
+  }
+}
+#BMWConnectButton {
+  background: url(../imgs/bg-button.png) no-repeat right top;padding:0;background-size:100% auto;background-rotate:90deg;
+  a{}
+  p{color: #262626; font-size: 13px; text-align: center; font-family:"BMW Type Global Pro Bold"; margin:0rem 4rem 3rem 4rem;}
+}
+#StepsCarousel{
+  padding:1rem 0;position:relative;background: url(../imgs/bg-copyright.png) no-repeat right bottom;background-size:100% auto;
+  h2 {color: #262626; font-size: 24px; font-family: "BMW Type Global Pro Bold"; margin-bottom: 2rem;margin: 0 3rem;}
+  .showvideo {
+    margin: 1rem 3rem 3rem 3rem; display: block;
+    a {color:#666; font-size: 13px; font-family: arial;text-decoration: none;font-weight: bold;}
+    video {width: 100%;}
+  }
+  ul{list-style-type: none;padding-left: 0;}
+  li{}
+  .elementcontainer {
+    text-align: center;width: 60%; margin:0 auto;
+    div{display: flex;flex-direction: row; align-items: center;margin-bottom: 1rem;}
+  }
+  .stepnumber{color:#009BF6;font-size: 36px; font-family: "BMW Type Global Pro Bold";margin:0 1rem 0 0;}
+  h3{font-size: 16px;color: #262626;font-family: "BMW Type Global Pro Bold"; line-height: 1.5rem;text-align: left;}
+  .desctext{
+    font-size: 12px;color: #262626; font-family: arial;text-align: left;margin-bottom: 1rem; line-height: 1.2rem;
+    a{text-decoration: none;color:#009BF6;}
+  }
+  .bx-wrapper{background: url(../imgs/bg-buttons-group.png) no-repeat left top; background-size:100% auto;}
+  .bx-viewport {margin-bottom: 2rem;}
+  .bx-pager {
+    display: flex;flex-direction: row; justify-content: center;
+    .bx-pager-item{
+      margin: 0 .5rem;
+      &:nth-child(1) a{
+        background: url(../imgs/ico-bullet-step-1.png) no-repeat center center;
+        &.active {background: url(../imgs/ico-bullet-step-1-current.png) no-repeat center center;}
+      }
+      &:nth-child(2) a{
+        background: url(../imgs/ico-bullet-step-2.png) no-repeat center center;
+        &.active {background: url(../imgs/ico-bullet-step-2-current.png) no-repeat center center;}
+      }
+      &:nth-child(3) a{
+        background: url(../imgs/ico-bullet-step-3.png) no-repeat center center;
+        &.active {background: url(../imgs/ico-bullet-step-3-current.png) no-repeat center center;}
+      }
+      &:nth-child(4) a{
+        background: url(../imgs/ico-bullet-step-4.png) no-repeat center center;
+        &.active {background: url(../imgs/ico-bullet-step-4-current.png) no-repeat center center;}
+      }
+      &:nth-child(5) a{
+        background: url(../imgs/ico-bullet-step-5.png) no-repeat center center;
+        &.active {background: url(../imgs/ico-bullet-step-5-current.png) no-repeat center center;}
+      }
+    }
+    a{
+      width: 30px; height: 30px; display: block;text-decoration:none;font-size: 0;
+      &.active{background-color: #006FD7;}
+    }
+  }
+  .bx-controls-direction{
+    a {text-decoration: none; color: #fff; position: absolute;top:50%;}
+    a.bx-prev {left:10px;background: url(../imgs/ic_keyboard_arrow_left_dark.png) no-repeat center center;width:40px;height:40px;}
+    a.bx-next {right:10px;background: url(../imgs/ic_keyboard_arrow_right_dark.png) no-repeat center center;width:40px;height:40px;}
+  }
+}
+.mobileshop {display: flex;justify-content: space-between;width: 80%;margin: 0 auto;}
+.applestore{display:block;width: 140px; height: 40px; background: url(../imgs/App-Store-Badge/WebSVG/Download_on_the_App_Store_Badge_ES_135x40.svg) no-repeat center center; background-size:100%;}
+.googleplay{display:block;width: 140px; height: 40px; background: url(../imgs/google-play-badge.png) no-repeat center center; background-size:115%;}
+.faq {
+  display:flex;justify-content: center; align-items: center; text-decoration:none;width:60%;margin:3rem auto; text-align: center;background: linear-gradient(180deg, #0099FD 0%, #0084EA 49.32%, #006FD7 100%);height: 30px;display: none;
+  span{font-size: 13px;color: #fff;}
+
+}
+#mainmenu {
+  padding: 1.5rem;
+  > div{
+    margin-bottom: 2rem; height: 230px;display: flex; flex-direction: column; text-align: left; padding-left: 6.5rem;justify-content: center;position: relative;
+    .filigrana{height:100%; position:absolute;top:0; left:0; width:25%;}
+    h3{color: #fff;font-family: arial; font-size: 16px;margin-top: 3rem;}
+    p{color: #fff;font-family: arial; font-size: 13px;width: 160px; min-height: 40px;}
+    a{
+      color: #fff; background: linear-gradient(180deg, #0099FD 0%, #0084EA 49.32%, #006FD7 100%); text-decoration: none;display: block;width: 160px;
+      span{margin: .5rem 1rem;display: block;font-size: 13px;font-family: arial; font-weight: bold;}
+    }
+  }
+  #appsection {
+    background: url(../imgs/bg-01.jpg) no-repeat center center; background-size:auto 100%;
+    .filigrana{background: url(../imgs/bg-01-left.png) no-repeat right center;background-size: 150%;}
+  }
+  #connectedsection {
+    background: url(../imgs/bg-02.jpg) no-repeat center center; background-size:auto 100%;
+    .filigrana{background: url(../imgs/bg-02-left.png) no-repeat right center;background-size: 150%;}
+  }
+  #registersection {
+    background: url(../imgs/bg-03.jpg) no-repeat center center; background-size:auto 100%;
+    .filigrana{background: url(../imgs/bg-03-left.png) no-repeat right center;background-size: 150%;}
+  }
+}
+.copyrightbmw {margin-top: 0px;color: #818181; font-size: 12px; text-align: center;padding: 1rem 3rem; font-family: "BMW Type Global Pro Light"; background: url(../imgs/bg-copyright.png) no-repeat right center; background-size:auto 100%;min-height:100px;}
+
+/* Menu central */
+.component{height: 120px;margin-bottom: 0; background: none;}
+.cn-button {background: url(../imgs/ico-bmw-connected.png) no-repeat center center; width:115px; height:115px;margin-left:-57px; margin-top:-42px;color:transparent;top:25%;}
+.csstransforms .cn-wrapper {top: 35%;font-size: .8em;}
+.csstransforms .cn-wrapper ul {position: relative;}
+.csstransforms .cn-wrapper li a{
+  background: -webkit-radial-gradient(transparent 35%, #BEBEBE 35%);
+  background: -moz-radial-gradient(transparent 35%, #BEBEBE 35%);
+  background: radial-gradient(transparent 0%, #BEBEBE 35%);
+  span{width:50px;height: 40px;}
+}
+.csstransforms .opened-nav li:first-child {
+	-webkit-transform: rotate(-3deg) skew(60deg);	-moz-transform: rotate(-3deg) skew(60deg);	-ms-transform: rotate(-3deg) skew(60deg);	transform: rotate(-3deg) skew(60deg);
+  span {background: url(../imgs/icon-option-sincroniza.png) no-repeat center center; background-size:100% auto; -moz-transform: rotate(78deg); -ms-transform: rotate(78deg);transform: rotate(78deg); top: 20px;left: 140px;}
+}
+.csstransforms .opened-nav li:nth-child(2) {
+	-webkit-transform: rotate(28deg) skew(60deg);	-moz-transform: rotate(28deg) skew(60deg);	-ms-transform: rotate(28deg) skew(60deg);	transform: rotate(28deg) skew(60deg);
+  span {background: url(../imgs/icon-option-remote.png) no-repeat center center; background-size:auto 100%; -moz-transform: rotate(47deg); -ms-transform: rotate(47deg);transform: rotate(47deg); top:20px; left:140px;}
+}
+.csstransforms .opened-nav  li:nth-child(3) {
+	-webkit-transform: rotate(59deg) skew(60deg);	-moz-transform: rotate(59deg) skew(60deg);	-ms-transform: rotate(59deg) skew(60deg);	transform: rotate(59deg) skew(60deg);
+  span {background: url(../imgs/icon-option-tiempoestimado.png) no-repeat center center; background-size:auto 100%; -moz-transform: rotate(16deg); -ms-transform: rotate(16deg);transform: rotate(16deg);top: 20px;left: 140px;}
+}
+.csstransforms .opened-nav li:nth-child(4) {
+	-webkit-transform: rotate(90deg) skew(60deg);	-moz-transform: rotate(90deg) skew(60deg);	-ms-transform: rotate(90deg) skew(60deg);	transform: rotate(90deg) skew(60deg);
+  span {background: url(../imgs/icon-option-momentosalir.png) no-repeat center center; background-size:auto 100%; -moz-transform: rotate(-15deg); -ms-transform: rotate(-15deg);transform: rotate(-15deg);top: 20px;left: 140px;}
+}
+.csstransforms .opened-nav li:nth-child(5) {
+	-webkit-transform: rotate(121deg) skew(60deg);-moz-transform: rotate(121deg) skew(60deg);	-ms-transform: rotate(121deg) skew(60deg);	transform: rotate(121deg) skew(60deg);
+  span {background: url(../imgs/icon-option-abordo.png) no-repeat center center; background-size:auto 100%; -moz-transform: rotate(-46deg); -ms-transform: rotate(-46deg);transform: rotate(-46deg); top: 20px;left: 140px;}
+}
+.csstransforms .opened-nav li:nth-child(6) {
+	-webkit-transform: rotate(152deg) skew(60deg);	-moz-transform: rotate(152deg) skew(60deg);	-ms-transform: rotate(152deg) skew(60deg);transform: rotate(152deg) skew(60deg);
+  span {background: url(../imgs/icon-option-ultimokm.png) no-repeat center center; background-size:auto 100%; -moz-transform: rotate(-77deg); -ms-transform: rotate(-77deg);transform: rotate(-77deg);top: 20px;left: 140px;}
+}
+.csstransforms .cn-wrapper li a:hover,
+.csstransforms .cn-wrapper li a:active,
+.csstransforms .cn-wrapper li a:focus {
+  background: -webkit-radial-gradient(transparent 35%, #00A1FF 35%);
+  background: -moz-radial-gradient(transparent 35%, #00A1FF 35%);
+  background: radial-gradient(transparent 0%, #00A1FF 35%);
+  /*box-shadow: 0 0 20px 0 #00A1FF;*/
+}
+#videoinstala1 {width: 100%;}
+#Serviciosheader {
+  padding: 1rem;background: url(../imgs/img-header-servicios.jpg) no-repeat center center;height:240px;
+  h2{color: #fff;font-size: 24px;font-family:"BMW Type Global Pro Bold";}
+}
+#Serviciosheaderfaq {
+  padding: 1rem;background: url(../imgs/img-header-servicios-faq.png) no-repeat center center;height:240px;
+  h2{color: #fff;font-size: 24px;font-family:"BMW Type Global Pro Bold";margin-top: 9rem;}
+}
+#Serviciostext {
+  p{font-family: arial;line-height: 1.2rem;color: #262626;margin-bottom: 2rem;font-size: 14px;width: 80%}
+  .bold{font-weight: bold;font-size: 13px;}
+  img{clear: both;display: block;}
+  a{color: #666;font-size: 13px; font-weight: bold;text-decoration: none;font-family:"BMW Type Global Pro Bold";display: block;margin: 1rem 0;}
+}
+#ServiciosCarousel {
+  padding: 0;
+  h3{margin: 1rem;}
+  .bx-viewport{padding-bottom: 2rem;}
+  li{
+    background: #fff;box-shadow: 2px 2px 5px #666;margin-right: 2px;
+    .elementcontainer{margin: 1rem;}
+    img{width: 100%;}
+    h4{color: #262626; font-size: 16px; font-family:"BMW Type Global Pro Bold"}
+    h5{color: #262626; font-size: 12px; font-family:"BMW Type Global Pro Bold"}
+    p{color: #262626; font-size: 14px; font-family: arial}
+    a{color: #666;font-size: 13px; font-weight: bold;text-decoration: none;font-family:"BMW Type Global Pro Bold"}
+  }
+  > div{
+    position: relative;padding: 1.5rem 2rem;
+    .bx-controls-direction{
+      a {text-decoration: none; color: #fff; position: absolute;top:50%;}
+      a.bx-prev {left:10px;background: url(../imgs/ico-prev-gray.png) no-repeat center center;width:16px;height:24px;}
+      a.bx-next {right:10px;background: url(../imgs/ico-next-gray.png) no-repeat center center;width:16px;height:24px;}
+    }
+  }
+  .tryservice {color: #fff;font-size: 13px;font-family: arial;padding: .5rem 2rem .5rem 1rem;background: linear-gradient(180deg, #0099FD 0, #0084EA 49.32%, #006FD7 100%);text-decoration: none;float: right;}
+}
+#ServiciosNoticias{
+  .noticia{background: #fff;padding: .5rem;display: flex;flex-direction: row;margin-bottom: 1rem;}
+  img{margin-right: .5rem;height: auto;display: block;}
+  h3{margin-top: 0; font-family:"BMW Type Global Pro Bold"; font-size: 16px; color: #262626;margin-bottom: 0;}
+  p{font-size: 14px; font-family: arial;font-size: 14px;}
+  a{color: #666;font-size: 13px; font-weight: bold;text-decoration: none;font-family:"BMW Type Global Pro Bold";display: block;margin-bottom: 1rem;}
+}
+#InicioSesion {
+  img {margin-right: 1rem;}
+  h2{color: #262626;font-size: 16px; font-family:"BMW Type Global Pro Bold";align-self: center;margin: 0}
+  div{clear: both;}
+  div:nth-child(1){display: flex;margin-bottom: 2rem;}
+  div:nth-child(2){display: flex;justify-content: flex-end; align-items: flex-end;flex-direction: row;}
+  a.ctaregistro{color: #fff; font-size: 13px; font-family: arial;padding: 1rem 2rem 1rem 1rem; background: linear-gradient(180deg, #B3B3B3 0%, #8E8E8E 100%);text-decoration: none;margin-right: 1rem}
+  a.ctainiciarsesion{color: #fff; font-size: 13px; font-family: arial;padding: 1rem 2rem 1rem 1rem; background: linear-gradient(180deg, #0099FD 0%, #0084EA 49.32%, #006FD7 100%); text-decoration: none;}
+  a.recuperapass {color: #666;font-size: 13px; font-family: "BMW Type Global Pro Bold";text-decoration: none;display: block;text-align: right;margin: 2rem 0}
+}
+
+@media screen and (min-width: 360px) {
+
+}
+@media screen and (min-width: 768px) {
+  header {
+    background-size: auto 55%;
+    p {width: 80%;}
+  }
+  section#mainmenu {
+    display: flex; flex-direction: row;justify-content: space-between;
+    > div {
+      width: 30%; justify-content: flex-end;
+      .filigrana{width: 25%;}
+    }
+    #appsection, #connectedsection {margin-right: 1rem;}
+    #registersection p {}
+    a{margin-bottom: 1rem;font-size: 13px;width: 160px;}
+    #appsection, #connectedsection, #registersection {
+      p {width: 160px;}
+      }
+  }
+  .csstransforms .cn-wrapper {top: 36%;font-size: 1em;}
+  .csstransforms .opened-nav li a span{width:60px;height: 50px;}
+  .csstransforms .opened-nav li:first-child span {background: url(../imgs/icon-option-sincroniza.png) no-repeat center center; background-size:100% auto; top: 20px;left: 173px;}
+  .csstransforms .opened-nav li:nth-child(2) span {background: url(../imgs/icon-option-remote.png) no-repeat center center; background-size:auto 100%; top:30px; left:181px;}
+  .csstransforms .opened-nav li:nth-child(3) span {background: url(../imgs/icon-option-tiempoestimado.png) no-repeat center center; background-size:auto 100%; top: 30px;left: 179px;}
+  .csstransforms .opened-nav li:nth-child(4) span {background: url(../imgs/icon-option-momentosalir.png) no-repeat center center; background-size:auto 100%; top: 30px;left: 176px;}
+  .csstransforms .opened-nav li:nth-child(5) span {background: url(../imgs/icon-option-abordo.png) no-repeat center center; background-size:auto 100%; top: 30px;left: 173px;}
+  .csstransforms .opened-nav li:nth-child(6) span {background: url(../imgs/icon-option-ultimokm.png) no-repeat center center; background-size:auto 100%; top: 30px;left: 176px;}
+  
+  #AppConnectedCarousel {
+    a.prevsection{background: url(../imgs/ic_keyboard_arrow_left_dark.png) no-repeat center center; width:40px; height:40px; position:absolute; top:35%; left:10px;}
+    a.nextsection{background: url(../imgs/ic_keyboard_arrow_right_dark.png) no-repeat center center; width:40px; height:40px; position:absolute; top:35%; right:10px;}
+    > div.containervideo {
+      height: 400px;flex-direction: row;
+      .leftcontainer{
+        width: 70%;float: left;height: 100%!important;
+        video::-internal-media-controls-download-button {
+          display:none;
+        }
+        video::-webkit-media-controls-enclosure {
+            overflow:hidden;
+        }
+
+        video::-webkit-media-controls-panel {
+            width: calc(100%+3px); /* Adjust as needed */
+        }
+        h3 {width: 50%;}
+        hr{width: 50%;}
+      }
+      .rightcontainer{
+        width: 30%;float: left;text-align: left;
+        img {margin-left: 24px;}
+      }
+    }
+    .bx-controls-direction a{top:35%;}
+    .mobileshop{
+      margin: 0 auto;justify-content: flex-start;
+      a{margin-right:1rem;}
+    }
+  }
+
+  #BMWConnectButton {
+    position: relative;
+    p{position: absolute;top: 30px;left:14%;text-align: left;}
+  }
+  #StepsCarousel {
+    ul{width: 100% !important;}
+    li {
+      width: 20% !important;
+      .elementcontainer {
+        width: 80%;
+        img{margin-bottom: 2rem;}
+        div.mobileshop{flex-direction: column; align-items: flex-start;width: 100%}
+      }
+    }
+    .bx-controls {display: none;}
+  }
+  a.faq{width: 155px;}
+  #Serviciosheader{
+    height: 400px;background-size: auto 100%;display: flex;
+    h2{font-size: 36px;align-self: flex-end;margin: 2rem;}
+  }
+  #Serviciostext {
+    display: flex;padding: 1.5rem 0 1.5rem 1.5rem;
+    div:nth-child(1){width: 60%}
+    div:nth-child(2){
+      background: #E6E6E6;width: 40%;margin-top: -4rem;padding-left: 2rem;
+      p{width: 100%;}
+    }
+  }
+  #ServiciosCarousel {
+    .bx-viewport {height: auto !important;}
+    ul{width: 100% !important;height: auto;padding: 0;transform: none !important; display: flex; flex-wrap: wrap;justify-content: space-between;}
+    li{width: 24% !important;margin-bottom: 1rem}
+    .bx-controls{display: none;}
+  }
+  #ServiciosNoticias{
+    display: flex;justify-content: space-between;
+    .noticia{width: 30%;}
+
+  }
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1270px) {
+}
+
+
+
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
